@@ -3,8 +3,6 @@ const formInput = form.elements['t'];
 
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-var xWrap = (canvas.width - 800) / 2;
-var yWrap = 60;
 
 var img = document.createElement("img");
 form.onsubmit = function(event) {
