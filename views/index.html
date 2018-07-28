@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Side B Text Gen</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/style.css">
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <form action="" id="tf" class="textform">
+      <input name="t" class="text" type="text" placeholder="Type something..." autofocus>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+    <script>
+      var socket = io();
+      $("form").submit(function() {
+        socket.emit('submission', $("#m").val());
+        $("#m").val('');
+        return false;
+      });
+    </script>
+
+    <canvas id="canvas" width="1300" height="500"></canvas>
+  </body>
+</html>
