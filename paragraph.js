@@ -18,10 +18,10 @@ function draw(value) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.save();
   ctx.beginPath();
-  ctx.font = "48pt Verdana";
+  ctx.font = "184pt Charis";
   var lines = wrap(formInput.value, canvas.width - parseInt(48,0));
     lines.forEach(function(line, i) {
-      ctx.fillText(line, 0, (i + 1) * parseInt(70,0));
+      ctx.fillText(line, 0, (i + 1) * parseInt(320,0));
     });
   //ctx.fillText(value, 10, 100);
   ctx.fill();

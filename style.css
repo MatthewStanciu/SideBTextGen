@@ -1,3 +1,5 @@
+/* CSS files add styling rules to your content */
+
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
@@ -19,4 +21,8 @@ canvas {
     margin-right: auto;
     display: block;
     width: 800px;
+}
+@font-face {
+  font-family: "Charis";
+  src: url("https://cdn.glitch.com/698488f3-b848-4b11-be98-9b7babb373a2%2FCharisSILB.ttf?1532830426538");
 }
