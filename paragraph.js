@@ -23,7 +23,6 @@ function draw(value) {
     lines.forEach(function(line, i) {
       ctx.fillText(line, 0, (i + 1) * parseInt(320,0));
     });
-  //ctx.fillText(value, 10, 100);
   ctx.fill();
   ctx.beginPath();
   ctx.globalCompositeOperation = "source-in";
