@@ -27,6 +27,31 @@ canvas {
   width: 800px;
   border: 1px solid #CA4A3B;
 }
+.sideb {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 220px;
+  display: block;
+}
+
+button{
+  background:#9F3B38;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:30px;
+  font-size:0.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:500ms ease all;
+  outline:none;
+}
+button:hover {
+  background:#873432;
+}
+
 @font-face {
   font-family: "Charis";
   src: url("https://cdn.glitch.com/698488f3-b848-4b11-be98-9b7babb373a2%2FCharisSILB.ttf?1532830426538");
