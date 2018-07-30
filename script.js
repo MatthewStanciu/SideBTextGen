@@ -4,21 +4,21 @@ const formInput = form.elements['t'];
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
+function submitButton(button) {
+  if (button === "paragraph") { draw(parseInt(48,0)); }
+  else { draw(1400); }
+}
+
 var img = document.createElement("img");
-form.onsubmit = function(event) {
-  event.preventDefault();
-  draw();
-  formInput.value = "";
-};
 
 img.src = "https://cdn.glitch.com/698488f3-b848-4b11-be98-9b7babb373a2%2Fsparkly-white-light-particles-moving-across-a-red-purple-blue-gradient-background-imitating-night-sky-full-of-stars_h2ctphk0_thumbnail-full01.png?1532784996284";
 
-function draw() {
+function draw(value) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.save();
   ctx.beginPath();
   ctx.font = "184pt Charis";
-  var lines = wrap(formInput.value, canvas.width - parseInt(48,0));
+  var lines = wrap(formInput.value, canvas.width - value);
     lines.forEach(function(line, i) {
       ctx.fillText(line, 0, (i + 1) * parseInt(320,0));
     });

@@ -6,15 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
-    <script src="/paragraph.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/script.js" defer></script>
   </head>
   <body>
-    <h1>Paragraph</h1>
     <form action="" id="tf" class="textform">
-      <input name="t" class="text" type="text" placeholder="Type something..." autofocus>
+      <input name="t" id="t" class="text" type="text" placeholder="Type something..." autofocus>
     </form>
+    <div id="buttons">
+      <input type="submit" form="tf" id="pg" name="textsub" value="paragraph">
+      <input type="submit" form="tf" id="blk" name="textsub" value="block">
+      <button type="button" id="clear">clear</button>
+    </div>
+    <script>
+      $(document).ready(function() {
+        $("#pg").click(function(e) {
+          e.preventDefault();
+          submitButton($("#pg").val());
+        });
+        $("#blk").click(function(e) {
+          e.preventDefault();
+          submitButton($("#blk").val());
+        });
+        $("#clear").click(function() {
+          $("#t").val('');
+        });
+      });
+    </script>
+    <br>
+    <br>
 
-    <canvas id="canvas" width="5200" height="2000"></canvas>
+    <canvas id="canvas" width="5200" height="3000"></canvas>
     <p>Save the image by right clicking it and clicking "Save as"</p>
     <a href="https://github.com/TechBug2012/SideBTextGen/blob/master/README.md" target="_blank"><p>Please read the README for instructions on how to properly use this in a Medium article</p></a>
   </body>
