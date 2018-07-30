@@ -23,10 +23,12 @@
         $("#pg").click(function(e) {
           e.preventDefault();
           submitButton($("#pg").val());
+          downloadImage($("#t").val());
         });
         $("#blk").click(function(e) {
           e.preventDefault();
           submitButton($("#blk").val());
+          downloadImage($("#t").val());
         });
         $("#clear").click(function() {
           $("#t").val('');
@@ -37,6 +39,15 @@
     <br>
 
     <canvas id="canvas" width="5200" height="3000"></canvas>
+    <script  src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.min.js"></script>
+    <script>
+      function downloadImage(input){
+        var canvas = document.getElementById("canvas");
+    	  canvas.toBlob(function(blob) {
+    		  saveAs(blob, input + ".png");
+    	  });
+      }
+    </script>
     <p>Save the image by right clicking it and clicking "Save as"</p>
     <a href="https://github.com/TechBug2012/SideBTextGen/blob/master/README.md" target="_blank"><p>Please read the README for instructions on how to properly use this in a Medium article</p></a>
   </body>
