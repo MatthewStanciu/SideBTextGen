@@ -13,8 +13,12 @@ var img = document.createElement("img");
 
 img.src = "https://cdn.glitch.com/698488f3-b848-4b11-be98-9b7babb373a2%2Fsparkly-white-light-particles-moving-across-a-red-purple-blue-gradient-background-imitating-night-sky-full-of-stars_h2ctphk0_thumbnail-full01.png?1532784996284";
 
-function draw(value) {
+function clearCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function draw(value) {
+  clearCanvas();
   ctx.save();
   ctx.beginPath();
   ctx.font = "184pt Charis";

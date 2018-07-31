@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="/script.js" defer></script>
-    <img class="sideb" src="https://cdn.glitch.com/698488f3-b848-4b11-be98-9b7babb373a2%2FSide%20B%20Logo%20Text%20No%20Background.png?1532986357538">
+    <a href="https://medium.com/side-b" target="_blank" ><img class="sideb" src="https://cdn.glitch.com/698488f3-b848-4b11-be98-9b7babb373a2%2FSide%20B%20Logo%20Text%20No%20Background.png?1532986357538"></a>
   </head>
   <body style="background-color:#fffdef;">
     <form action="" id="tf" class="textform">
       <input name="t" id="t" class="text" type="text" placeholder="Type something..." autofocus>
     </form>
     <div id="buttons">
-      <button class="b" type="submit" form="tf" id="pg" name="textsub" value="paragraph">Paragraph</button>
-      <button class="b" type="submit" form="tf" id="blk" name="textsub" value="block">Block</button>
-      <button class="b" type="button" id="clear">Clear</button>
+      <button type="submit" form="tf" id="pg" name="textsub" value="paragraph">Paragraph</button>
+      <button ype="submit" form="tf" id="blk" name="textsub" value="block">Block</button>
+      <button type="button" id="clear">Clear</button>
     </div>
     <script>
       $(document).ready(function() {
@@ -33,6 +33,7 @@
         });
         $("#clear").click(function() {
           $("#t").val('');
+          clearCanvas();
         });
       });
     </script>
