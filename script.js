@@ -5,8 +5,8 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 function submitButton(button) {
-  if (button === "paragraph") { draw(parseInt(48,0)); }
-  else { draw(1400); }
+  if (button === "paragraph") { draw(400, "     "); }
+  else { draw(1400, "           "); }
 }
 
 var img = document.createElement("img");
@@ -17,14 +17,14 @@ function clearCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-function draw(value) {
+function draw(value, indentation) {
   clearCanvas();
   ctx.save();
   ctx.beginPath();
   ctx.font = "184pt Charis";
   var lines = wrap(formInput.value, canvas.width - value);
     lines.forEach(function(line, i) {
-      ctx.fillText(line, 0, (i + 1) * parseInt(320,0));
+      ctx.fillText(indentation + line, 0, (i + 1) * parseInt(320,0));
     });
   ctx.fill();
   ctx.beginPath();
