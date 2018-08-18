@@ -11,7 +11,7 @@ function submitButton(button) {
 
 var img = document.createElement("img");
 
-img.src = "https://cdn.glitch.com/698488f3-b848-4b11-be98-9b7babb373a2%2Fsparkly-white-light-particles-moving-across-a-red-purple-blue-gradient-background-imitating-night-sky-full-of-stars_h2ctphk0_thumbnail-full01.png?1532784996284";
+img.src = "https://cdn.glitch.com/698488f3-b848-4b11-be98-9b7babb373a2%2Fpurple-red-gradient-linear-2880x1800-c2-9400d3-dc143c-a-120-f-14.jpg?1534633516225";
 
 function clearCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
