@@ -5,7 +5,7 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 function submitButton(button) {
-  if (button === "paragraph") { draw(400, "     "); }
+  if (button === "paragraph") { draw(400, "    "); }
   else { draw(1400, "           "); }
 }
 
